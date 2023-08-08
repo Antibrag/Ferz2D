@@ -1,0 +1,5 @@
+/home/bragin/Документы/C++ Projects/Ferz2D - Game Engine/cmake/CMakeFiles/Ferz2D.dir
+/home/bragin/Документы/C++ Projects/Ferz2D - Game Engine/cmake/CMakeFiles/edit_cache.dir
+/home/bragin/Документы/C++ Projects/Ferz2D - Game Engine/cmake/CMakeFiles/rebuild_cache.dir
+/home/bragin/Документы/C++ Projects/Ferz2D - Game Engine/cmake/include/CMakeFiles/edit_cache.dir
+/home/bragin/Документы/C++ Projects/Ferz2D - Game Engine/cmake/include/CMakeFiles/rebuild_cache.dir

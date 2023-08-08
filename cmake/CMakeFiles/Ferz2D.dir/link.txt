@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/Ferz2D.dir/src/main.cpp.o -o Ferz2D  -lsfml-window -lsfml-system -lsfml-graphics 
