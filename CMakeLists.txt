@@ -4,7 +4,7 @@ set(PROJECT_NAME Ferz2D)
 
 project(${PROJECT_NAME})
 
-set(MAIN_FILE main.cpp)
+set(MAIN_FILE src/main.cpp)
 set(INCLUDE_PATH include/)
 set(SFML_PATH include/SFML)
 
