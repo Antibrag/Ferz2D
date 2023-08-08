@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Prerequisites
 *.d
 
@@ -30,3 +31,6 @@
 *.exe
 *.out
 *.app
+=======
+.vscode
+>>>>>>> 4fb9a7c (update .gitignore)
