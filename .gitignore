@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Prerequisites
 *.d
 
@@ -34,3 +35,8 @@
 =======
 .vscode
 >>>>>>> 4fb9a7c (update .gitignore)
+=======
+.vscode
+LICENSE
+README.md
+>>>>>>> 314bc88 (add license and readme.md to .gitignroe)
