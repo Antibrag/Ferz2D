@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4deb968 (update .gitignore)
 # Prerequisites
 *.d
 
@@ -31,6 +34,7 @@
 # Executables
 *.exe
 *.out
+<<<<<<< HEAD
 *.app
 =======
 .vscode
@@ -40,3 +44,6 @@
 LICENSE
 README.md
 >>>>>>> 314bc88 (add license and readme.md to .gitignroe)
+=======
+*.app
+>>>>>>> 4deb968 (update .gitignore)
