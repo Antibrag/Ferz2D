@@ -20,9 +20,9 @@ public:
     //Get and set position
     Vector2<float> GetPosition() { return position; }
 
-    Vector2<float> SetPositon(Vector2<float> new_pos) { position = new_position; }
+    Vector2<float> SetPosition(Vector2<float> new_pos) { position = new_position; }
 
-    Vector2<float> SetPositon(float new_x, float new_y) {
+    Vector2<float> SetPosition(float new_x, float new_y) {
         position.x = new_x;
         position.y = new_y;
     }
