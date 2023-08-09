@@ -1,13 +1,19 @@
 #include "../headers/headers.hpp"
 
-class EngineIO {
-private:
-
-public:
-
-
-};
-
 int main() {
-    cout << "Hello World!" << endl;
+    RenderWindow win(VideoMode(500, 500), "Test win");
+
+    while (win.isOpen()) {
+        Event event;
+
+        while (win.pollEvent(event)) {
+            if (event.type == Event::Closed) 
+                win.close();
+        }
+
+        win.clear();
+        win.display();
+    }
+
+    return EXIT_SUCCESS;
 }
