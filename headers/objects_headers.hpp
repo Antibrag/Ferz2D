@@ -33,5 +33,8 @@ public:
     string GetName();
     void SetName(string new_name);
 
+    void AddProperty(Property& new_property);
+    void EraseProperty(string name_property);
+
     Object(string name);
 };
