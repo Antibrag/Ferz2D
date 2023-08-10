@@ -1,7 +1,7 @@
 #include "../headers/headers.hpp"
 
 int main() {
-    RenderWindow win(VideoMode(500, 500), "Test win");
+    RenderWindow win(VideoMode(400, 400), "Test win");
 
     while (win.isOpen()) {
         Event event;
