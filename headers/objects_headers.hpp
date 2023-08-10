@@ -7,6 +7,8 @@ public:
     string GetName();
     void SetName(string new_name);
 
+    Property();
+
     Property(string name);
 };
 
