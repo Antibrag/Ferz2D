@@ -36,7 +36,7 @@ public:
 class Object {
 private:
     string name;
-    vector<Property> properties;
+    vector<Property*> properties;
 public:
     string GetName();
     void SetName(string new_name);
@@ -45,4 +45,5 @@ public:
     void EraseProperty(string name_property);
 
     Object(string name);
+    ~Object();
 };

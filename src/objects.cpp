@@ -55,9 +55,7 @@ public:
 class Object {
 private:
     string name;
-    vector<Property> properties;
-
-protected:
+    vector<Property*> properties;
 
 public:
     //Get and set for name object
@@ -68,13 +66,13 @@ public:
     //Properties func
     void AddProperty(string name_property) { 
         if (name_property == "Transform")
-            properties.push_back(*Property_Transform::CreateProperty());
+            properties.push_back(Property_Transform::CreateProperty());
         
     }
 
     void EraseProperty(string name_property) {
-        for (vector<Property>::iterator i { properties.begin() }; i != properties.cend(); i++) {
-            if ((*i).GetName() == name_property)
+        for (vector<Property*>::iterator i { properties.begin() }; i != properties.cend(); i++) {
+            if ((*(*i)).GetName() == name_property)
                 properties.erase(i);
         }
     }
@@ -84,6 +82,10 @@ public:
         SetName(name);
     }
 
-
+    ~Object() {
+        name = nullptr;
+        for (int i = 0; i < properties.size(); i++)
+            delete properties[i];
+    }
 
 };
