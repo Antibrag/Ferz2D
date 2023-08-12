@@ -44,6 +44,11 @@ public:
         position.x = 0;
         position.y = 0;
     }
+
+    ~Property_Transform() {
+        position.x = NULL;
+        position.y = NULL;
+    }
 };
 
 

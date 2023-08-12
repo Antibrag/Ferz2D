@@ -29,6 +29,8 @@ public:
     static Property_Transform* CreateProperty();
     
     Property_Transform();
+
+    ~Property_Transform();
 };
 
 class Object {
