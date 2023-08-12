@@ -14,6 +14,10 @@ public:
     Property(string name) {
         SetName(name);
     }
+
+    ~Property() {
+        name = nullptr;
+    }
 };
 
 class Property_Transform : public Property {
@@ -39,10 +43,6 @@ public:
         SetName("Transform");
         position.x = 0;
         position.y = 0;
-    }
-
-    ~Property_Transform() {
-        delete this;
     }
 };
 
@@ -78,5 +78,7 @@ public:
     Object(string name) {
         SetName(name);
     }
+
+
 
 };

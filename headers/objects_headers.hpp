@@ -10,6 +10,9 @@ public:
     Property();
 
     Property(string name);
+
+    ~Property();
+
 };
 
 class Property_Transform : Property {
