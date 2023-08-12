@@ -1,4 +1,5 @@
 #include "../headers/headers.hpp"
+#include <map>
 
 class Property {
 private:
@@ -29,9 +30,19 @@ public:
         position.y = new_y;
     }
 
+    static Property_Transform* CreateProperty() {
+        Property_Transform* pr = new Property_Transform;
+        return pr;
+    }
+
     Property_Transform() {
+        SetName("Transform");
         position.x = 0;
         position.y = 0;
+    }
+
+    ~Property_Transform() {
+        delete this;
     }
 };
 
@@ -40,6 +51,9 @@ class Object {
 private:
     string name;
     vector<Property> properties;
+
+protected:
+
 public:
     //Get and set for name object
     string GetName() { return name; }
@@ -47,10 +61,14 @@ public:
     void SetName(string new_name) { name = new_name; }
 
     //Properties func
-    void AddProperty(Property& new_property) { properties.push_back(new_property); }
+    void AddProperty(string name_property) { 
+        if (name_property == "Transform")
+            properties.push_back(*Property_Transform::CreateProperty());
+        
+    }
 
     void EraseProperty(string name_property) {
-        for (auto i { properties.begin() }; i != properties.cend(); i++) {
+        for (vector<Property>::iterator i { properties.begin() }; i != properties.cend(); i++) {
             if ((*i).GetName() == name_property)
                 properties.erase(i);
         }

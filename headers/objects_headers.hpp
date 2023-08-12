@@ -22,6 +22,8 @@ public:
     Vector2<float> SetPosition(Vector2<float> new_pos);
 
     Vector2<float> SetPosition(float new_x, float new_y);
+
+    static Property_Transform* CreateProperty();
     
     Property_Transform();
 };
@@ -29,11 +31,12 @@ public:
 class Object {
 private:
     string name;
+    vector<Property> properties;
 public:
     string GetName();
     void SetName(string new_name);
 
-    void AddProperty(Property& new_property);
+    void AddProperty(string new_property);
     void EraseProperty(string name_property);
 
     Object(string name);
