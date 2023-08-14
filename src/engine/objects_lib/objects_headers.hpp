@@ -1,3 +1,10 @@
+#include <vector>
+#include <string>
+#include <SFML/Graphics.hpp>
+
+using namespace std;
+using namespace sf;
+
 class Property {
 private:
     string name;
