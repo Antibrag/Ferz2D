@@ -1,5 +1,9 @@
-#include "../headers/headers.hpp"
-#include "../headers/objects_headers.hpp"
+#include <iostream>
+#include <SFML/Graphics.hpp>
+#include "engine/objects_lib/objects_headers.hpp"
+
+using namespace sf;
+using namespace std;
 
 int main() {
     RenderWindow win(VideoMode(400, 400), "Test win");

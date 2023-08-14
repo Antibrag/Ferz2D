@@ -1,5 +1,3 @@
-#include "../headers/headers.hpp"
-
 class Property {
 private:
     string name;
