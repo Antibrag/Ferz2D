@@ -1,4 +1,4 @@
-#include "../headers/headers.hpp"
+#include "headers/headers.hpp"
 #include <map>
 
 class Property {
@@ -74,6 +74,13 @@ public:
         for (vector<Property*>::iterator i { properties.begin() }; i != properties.cend(); i++) {
             if ((*(*i)).GetName() == name_property)
                 properties.erase(i);
+        }
+    }
+
+    template<class T> T GetProperty(string name_property) {
+        for (vector<Property*>::iterator i { properties.begin() }; i != properties.cend(); i++) {
+            if ((*(*i)).GetName() == name_property)
+                return (*(*i));
         }
     }
     

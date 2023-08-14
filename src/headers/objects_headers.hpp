@@ -44,6 +44,9 @@ public:
     void AddProperty(string new_property);
     void EraseProperty(string name_property);
 
+    template<class T>
+    T GetProperty(string name_property);
+
     Object(string name);
     ~Object();
 };

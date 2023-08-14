@@ -1,7 +1,11 @@
 #include "../headers/headers.hpp"
+#include "../headers/objects_headers.hpp"
 
 int main() {
     RenderWindow win(VideoMode(400, 400), "Test win");
+    Object test_obj("Test Object");
+    test_obj.AddProperty("Transform");
+    test_obj.GetProperty<Property_Transform>("Transform").SetPosition(200, 200);
 
     while (win.isOpen()) {
         Event event;
