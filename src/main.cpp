@@ -1,5 +1,5 @@
 #include <iostream>
-#include <SFML/Graphics.hpp>
+#include "sfml/include/Graphics.hpp"
 #include "engine/objects_lib/objects_headers.hpp"
 
 using namespace sf;
