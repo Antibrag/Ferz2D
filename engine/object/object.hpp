@@ -1,12 +1,13 @@
 #include <vector>
 #include <string>
+#include "../properties/properties.hpp"
 
 using namespace std;
 
 class Object {
 private:
     string name;
-    vector<Property*> properties;
+    vector<Properties::Property*> properties;
 public:
     string GetName() { return name; }
     void SetName(string new_name) { name = new_name; }
