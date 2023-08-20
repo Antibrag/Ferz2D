@@ -1,20 +1,25 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.2)
 
 set(PROJECT_NAME Ferz2D)
 
 project(${PROJECT_NAME})
 
-set(MAIN_FILE src/main.cpp)
-set(INCLUDE_PATH include/)
-set(HEADERS_PATH headers/)
-set(SFML_PATH include/SFML)
+find_package(SFML 2.6 COMPONENTS system graphics network audio window)
 
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/Executable)
+add_subdirectory(engine/object)
+add_subdirectory(engine/properties)
 
-add_executable(${PROJECT_NAME} ${MAIN_FILE})
+add_executable(${PROJECT_NAME} test/test.cpp)
 
-add_subdirectory(${INCLUDE_PATH})
-add_subdirectory(${HEADERS_PATH})
-target_include_directories(${PROJECT_NAME} PRIVATE ${SFML_LIB})
-target_include_directories(${PROJECT_NAME} PRIVATE ${HEADERS_PATH})
-target_link_libraries(${PROJECT_NAME} PRIVATE sfml-window sfml-system sfml-graphics)
+target_link_libraries(${PROJECT_NAME}
+                        PUBLIC 
+                        object_lib
+                        properties_lib
+                        sfml-graphics 
+                        sfml-system 
+                        sfml-window 
+                        sfml-audio 
+                        sfml-network
+)
+
+#target_include_directories(${PROJECT_NAME} ${CMAKE_BUILD_RPATH}/include)
