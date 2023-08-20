@@ -1,6 +1,6 @@
 #include <vector>
 #include <string>
-#include "../../sfml/include/Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 using namespace std;
 using namespace sf;
@@ -81,7 +81,8 @@ public:
         }
     }
 
-    template<class T> T GetProperty(string name_property) {
+    template<class P>
+    P GetProperty(string name_property) {
         for (vector<Property*>::iterator i { properties.begin() }; i != properties.cend(); i++) {
             if ((*(*i)).GetName() == name_property)
                 return (*(*i));

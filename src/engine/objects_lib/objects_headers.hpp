@@ -1,6 +1,6 @@
 #include <vector>
 #include <string>
-#include "../../sfml/include/Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 using namespace std;
 using namespace sf;
@@ -49,8 +49,8 @@ public:
     void AddProperty(string new_property);
     void EraseProperty(string name_property);
 
-    template<class T>
-    T GetProperty(string name_property);
+    template<class P>
+    P GetProperty(string name_property);
 
     Object(string name);
     ~Object();
