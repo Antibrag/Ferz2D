@@ -1,5 +1,4 @@
 #include "object.hpp"
-#include <SFML/Graphics.hpp>
 
 void Object::AddProperty(string name_property) {
     if (name_property == "Transform")
