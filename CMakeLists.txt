@@ -6,13 +6,15 @@ project(${PROJECT_NAME})
 
 find_package(SFML 2.6 COMPONENTS system graphics network audio window)
 
-add_library(objects_lib STATIC src/engine/objects_lib/objects_headers.hpp src/engine/objects_lib/objects.cpp)
+add_subdirectory(engine/object)
+add_subdirectory(engine/properties)
 
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME} test/test.cpp)
 
 target_link_libraries(${PROJECT_NAME}
                         PUBLIC 
-                        objects_lib
+                        object_lib
+                        properties_lib
                         sfml-graphics 
                         sfml-system 
                         sfml-window 
@@ -20,4 +22,4 @@ target_link_libraries(${PROJECT_NAME}
                         sfml-network
 )
 
-target_include_directories(${PROJECT_NAME} ${CMAKE_BUILD_RPATH}/include)
+#target_include_directories(${PROJECT_NAME} ${CMAKE_BUILD_RPATH}/include)
