@@ -1,3 +1,6 @@
+#ifndef OBJECT_H
+#define OBJECT_H
+
 #include <vector>
 #include <string>
 #include "../properties/properties.hpp"
@@ -19,3 +22,5 @@ public:
     Object(string name);
     ~Object();
 };
+
+#endif

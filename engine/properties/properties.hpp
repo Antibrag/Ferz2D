@@ -1,3 +1,6 @@
+#ifndef PROPERTIES_H
+#define PROPERTIES_H
+
 #include <vector>
 #include <string>
 #include <SFML/Graphics.hpp>
@@ -29,3 +32,5 @@ namespace Properties {
         ~Property_Transform();
     };
 }
+
+#endif 
