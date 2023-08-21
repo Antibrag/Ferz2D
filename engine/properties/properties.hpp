@@ -20,7 +20,7 @@ namespace Properties {
         ~Property();
     };
 
-    class Property_Transform : public Property {
+    class Transform : public Property {
     private:
         sf::Vector2<float> position;
     public:
@@ -28,8 +28,8 @@ namespace Properties {
         void SetPosition(sf::Vector2<float> new_position) { position = new_position; }
         void SetPosition(float new_x, float new_y);
 
-        Property_Transform();
-        ~Property_Transform();
+        Transform();
+        ~Transform();
     };
 }
 
