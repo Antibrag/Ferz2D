@@ -8,19 +8,18 @@
 using namespace std;
 
 namespace Properties {
-    // class Property {
-    // private:
-    //     string name;
-    // public:
-    //     string GetName() { return name; }
-    //     void SetName(string new_name) { name = new_name; }
+    class Property {
+    private:
+        string internal_name;
+    public:
+        string GetName() { return internal_name; }
+        void SetName(string new_name) { internal_name = new_name; }
 
-    //     Property();
-    //     Property(string name);
-    //     ~Property();
-    // };
+        Property();
+        ~Property();
+    };
 
-    class Transform {
+    class Transform : public Property{
     private:
         sf::Vector2<float> position;
     public:

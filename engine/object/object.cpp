@@ -2,7 +2,7 @@
 
 void Object::AddProperty(string name_property) {
     if (name_property == "Transform")
-        properties.push_back(new Properties::Property_Transform);
+        properties.push_back(new Properties::Transform);
 }
 
 void Object::EraseProperty(string name_property) {
