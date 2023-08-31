@@ -12,13 +12,6 @@ void Object::EraseProperty(string name_property) {
     }
 }
 
-template<class T> T Object::GetProperty(string name_property) {
-    for (vector<Properties::Property*>::iterator i { properties.begin() }; i != properties.cend(); i++) {
-        if ((*(*i)).GetName() == name_property)
-            return (*(*i));
-    }
-}
-
 Object::Object(string name) {
     SetName(name);
 }
