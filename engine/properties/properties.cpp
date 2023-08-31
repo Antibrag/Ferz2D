@@ -1,10 +1,10 @@
 #include "properties.hpp"
 
-Properties_List::Property::Property() {
+Properties_List::Base_Property::Base_Property() {
     internal_name = "Undefined Property";
 }
 
-Properties_List::Property::~Property() {
+Properties_List::Base_Property::~Base_Property() {
     internal_name = nullptr;
 }
 
