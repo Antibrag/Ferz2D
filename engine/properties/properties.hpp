@@ -7,7 +7,7 @@
 
 using namespace std;
 
-namespace Properties {
+namespace Properties_List {
     class Property {
     private:
         string internal_name;
