@@ -12,8 +12,8 @@ namespace Properties_List {
     private:
         string internal_name;
     public:
-        string GetName() { return internal_name; }
-        void SetName(string new_name) { internal_name = new_name; }
+        string GetInternalName() { return internal_name; }
+        void SetInternalName(string new_internal_name);
 
         Base_Property();
         ~Base_Property();

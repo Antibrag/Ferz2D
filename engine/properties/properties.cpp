@@ -1,5 +1,10 @@
 #include "properties.hpp"
 
+void Properties_List::Base_Property::SetInternalName(string new_internal_name) {
+    if (GetInternalName().empty())
+        internal_name = new_internal_name;
+}
+
 Properties_List::Base_Property::Base_Property() {
     internal_name = "Undefined Property";
 }
@@ -14,7 +19,7 @@ void Properties_List::Transform::SetPosition(float new_x, float new_y) {
 }
 
 Properties_List::Transform::Transform() {
-    SetName("Transform");
+    SetInternalName("Transform");
     position.x = 0;
     position.y = 0;
 }
