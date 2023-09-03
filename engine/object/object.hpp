@@ -1,37 +1,42 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
-#include <vector>
-#include <string>
-#include "../properties/properties.hpp"
 #include <iostream>
+#include <map>
+#include "../properties/properties.hpp"
 
 using namespace std;
 
-struct Object_Properties_List {
+struct Object_Properties {
+private:
+    map<string, Properties_List::Base_Property*> internal_properties_list = {
+        {"Transform", nullptr}
+    };
 public:
-    Properties_List::Transform *Object_Propety_Transform;
+    //Object_Properties();
+    ~Object_Properties();
+
+    void AddProperty(string property_internal_name);
+
+    void EraseProperty(string property_internal_name);
+
+    template<class T> T GetProperty(string property_internal_name) {
+        if (property_internal_name == "Transform") {
+            cout << "Get Transform" << endl;
+            return dynamic_cast<Properties_List::Transform*>(internal_properties_list[property_internal_name]);
+        }   
+    }
 };
 
 class Object {
 private:
     string name;
+    Object_Properties properties;
 public:
     string GetName() { return name; }
     void SetName(string new_name) { name = new_name; }
 
-    void AddProperty(string name_property);
-    void EraseProperty(string name_property);
-    
-    template<class TProperty> TProperty* GetProperty() {
-        for (vector<Properties_List::Base_Property*>::iterator i { properties.begin() }; i != properties.cend(); i++) {
-            if (typeid((*(*i))).name() == typeid(TProperty).name())
-                return *i;
-        }
-
-        cout << "Not finded property type" << endl;
-        return nullptr;
-    }
+    Object_Properties GetPropertiesList() { return properties; }
 
     Object(string name);
     ~Object();

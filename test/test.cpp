@@ -6,8 +6,8 @@ using namespace std;
 int main() {
     RenderWindow win(VideoMode(400, 400), "Test win");
     Object test_obj("Test Object");
-    test_obj.AddProperty("Transform");
-    test_obj.GetProperty<Properties_List::Transform>()->SetPosition(200, 200);
+    test_obj.GetPropertiesList().AddProperty("Transform");
+    test_obj.GetPropertiesList().GetProperty<Properties_List::Transform*>("Transform")->SetPosition(200, 200);
 
     while (win.isOpen()) {
         Event event;

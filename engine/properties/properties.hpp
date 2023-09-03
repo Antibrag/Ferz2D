@@ -16,7 +16,7 @@ namespace Properties_List {
         void SetInternalName(string new_internal_name);
 
         Base_Property();
-        ~Base_Property();
+        virtual ~Base_Property();
     };
 
     class Transform : public Base_Property{
