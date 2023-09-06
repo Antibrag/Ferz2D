@@ -15,6 +15,7 @@ target_link_libraries(${PROJECT_NAME}
                         PUBLIC 
                         object_lib
                         properties_lib
+                        engine_debuger
                         sfml-graphics 
                         sfml-system 
                         sfml-window 
