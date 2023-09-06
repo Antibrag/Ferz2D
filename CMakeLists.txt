@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.2)
 
 set(PROJECT_NAME Ferz2D)
 
-project(${PROJECT_NAME})
+project(${PROJECT_NAME} VERSION 0.1)
 
 find_package(SFML 2.6 COMPONENTS system graphics network audio window)
 
